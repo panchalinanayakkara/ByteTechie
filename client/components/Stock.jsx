@@ -31,7 +31,7 @@ export default class Stock extends Component{
                     <td width="500px">{stock.drugCategory}</td>
                     <td width="500px">{stock.drugPrice}</td>
                     <td width="500px">{stock.drugQuantity}</td>
-                    <td width="500px"><button>Place Order</button></td>
+                    <td><button>Place Order</button></td>
                 </tr>
         }
 }
