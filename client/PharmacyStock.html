@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>Place Order</title>
+<title>Pharmacy Stock</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -10,7 +10,7 @@
 body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 </style>
 <body class="w3-light-grey w3-content" style="max-width:1600px">
-<script src="bundle.js"></script>
+
 <!-- Sidebar/menu -->
 <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
   <div class="w3-container">
@@ -35,17 +35,40 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
     <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
     <div class="w3-container">
-    <h1><b>Place Order</b></h1>
+    <h1><b>Pharmacy Stock</b></h1>
     </div>
   </header>
 
   <!-- Contact Section -->
-  <div class="w3-container w3-padding-large w3-grey"  id="placeOrder">
-    <h4 id="contact"><b>Send mail to place order</b></h4>
-    <hr class="w3-opacity">
-    <div class="w3-section" id="placeOrder">
-      </div>
-  </div>
+  
+  <div class="w3-container w3-padding-large w3-grey">
+      <h4 id="contact"><b>Stock Handling</b></h4>
+      <hr class="w3-opacity">
+        <div class="w3-section">
+         <table>
+           <thead>
+             <tr>
+               <th width="500px">Drug Name</th>
+               <th width="500px">Unit Type</th>
+               <th width="500px">Drug Category</th>
+               <th width="500px">Drug Price</th>
+               <th width="500px">Drug Quantity</th>
+               <th width="500px">Send Mail</th>
+             </tr>
+           </thead>
+           <tbody>
+              <td width="500px">Drug Name</td>
+              <td width="500px">Drug Name</td>
+              <td width="500px">Drug Name</td>
+              <td width="500px">Drug Name</td>
+              <td width="500px">Drug Name</td>
+              <td width="500px"><a href="PlaceOrder.html"><button class="w3-button w3-black w3-margin-bottom"><i class="fa fa-paper-plane w3-margin-right"></i>Place Order</button></a></td>
+           </tbody>
+         </table>
+        </div>
+        <button type="submit" class="w3-button w3-black w3-margin-bottom"><i class="fa fa-paper-plane w3-margin-right"></i>View As PDF</button>
+
+    </div>
 
 <!-- End page content -->
 </div>
