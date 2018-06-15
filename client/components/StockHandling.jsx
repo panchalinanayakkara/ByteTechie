@@ -4,18 +4,22 @@ import React, {Component}  from 'react';
 import Axios from 'axios';
 
 import Prescriptions from './Prescriptions.jsx';
+import Drugs from './Drugs';
 
 import '../styles/css.css';
 import '../styles/w3.css';
+
 
 export default class StockHandling extends Component{
     constructor(props)
     {
         super(props);
         this.state = {
-            prescriptions: []
+            prescriptions: [],
+            drugs: []
         }
         this.getAllPrescriptions();
+        this.getAllDrugs();
     }
 
     getAllPrescriptions()
@@ -24,6 +28,16 @@ export default class StockHandling extends Component{
         Axios.get(this.getAllPrescriptions).then(res  =>  {
             this.setState({
               prescriptions:  res.data.data  ||  res.data
+            });
+          })
+    }
+
+    getAllDrugs()
+    {
+        this.getAllPrescriptions = "/drug/getAllDrugs";
+        Axios.get(this.getAllDrugs).then(res  =>  {
+            this.setState({
+              drugs:  res.data.data  ||  res.data
             });
           })
     }
@@ -89,26 +103,7 @@ export default class StockHandling extends Component{
             <h4 id="contact"><b>Stock Handling</b></h4>
             <hr className="w3-opacity" />
             <div className="w3-section">
-              <table>
-                <thead>
-                  <tr>
-                    <th width="500px">Drug Name</th>
-                    <th width="500px">Unit Type</th>
-                    <th width="500px">Drug Category</th>
-                    <th width="500px">Drug Price</th>
-                    <th width="500px">Drug Quantity</th>
-                    <th width="500px">Send Mail</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr><td width="500px">Drug Name</td>
-                    <td width="500px">Drug Name</td>
-                    <td width="500px">Drug Name</td>
-                    <td width="500px">Drug Name</td>
-                    <td width="500px">Drug Name</td>
-                    <td width="500px"><a href="PlaceOrder.html"><button className="w3-button w3-black w3-margin-bottom"><i className="fa fa-paper-plane w3-margin-right" />Place Order</button></a></td>
-                  </tr></tbody>
-              </table>
+            <Drugs drugs={this.state.drugs} getAllDrugs = {() => this.getAllDrugs ()}/>
             </div>
             <button type="submit" className="w3-button w3-black w3-margin-bottom"><i className="fa fa-paper-plane w3-margin-right" />View As PDF</button>
           </div>
