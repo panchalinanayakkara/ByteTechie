@@ -34,7 +34,6 @@ export default class Stocks extends Component{
                         <th width="500px">Drug Category</th>
                         <th width="500px">Drug Price</th>
                         <th width="500px">Drug Quantity</th>
-                        <th width="500px">Send Mail</th>
                     </tr>
                 </thead>
                 <tbody>

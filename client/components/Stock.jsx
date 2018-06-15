@@ -3,6 +3,7 @@
 import React, {Component} from 'react';
 
 import '../styles/css.css';
+//import '../styles/font-awesome.min.css';
 import '../styles/w3.css';
 
 export default class Stock extends Component{
@@ -30,7 +31,6 @@ export default class Stock extends Component{
                     <td width="500px">{stock.drugCategory}</td>
                     <td width="500px">{stock.drugPrice}</td>
                     <td width="500px">{stock.drugQuantity}</td>
-                    <td><button>Place Order</button></td>
                 </tr>
         }
 }
