@@ -3,7 +3,6 @@
 import React, { Component } from 'react';
 
 import '../styles/css.css';
-//import '../styles/font-awesome.min.css';
 import '../styles/w3.css';
 
 export default class PlaceOrder extends Component {

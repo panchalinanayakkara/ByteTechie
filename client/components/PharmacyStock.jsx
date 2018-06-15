@@ -6,7 +6,6 @@ import Axios from 'axios';
 import Stocks from './Stocks.jsx';
 
 import '../styles/css.css';
-//import '../styles/font-awesome.min.css';
 import '../styles/w3.css';
 
 export default class PharmacyStock extends Component{
