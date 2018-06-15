@@ -10,7 +10,7 @@
 body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 </style>
 <body class="w3-light-grey w3-content" style="max-width:1600px">
-
+<script src="bundle.js"></script>
 <!-- Sidebar/menu -->
 <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
   <div class="w3-container">
@@ -39,28 +39,11 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
   </header>
 
   <!-- Contact Section -->
-  <div class="w3-container w3-padding-large w3-grey">
+  <div class="w3-container w3-padding-large w3-grey"  id="placeOrder">
     <h4 id="contact"><b>Send mail to place order</b></h4>
     <hr class="w3-opacity">
-    <form action="/action_page.php" target="_blank">
-      <div class="w3-section">
-        <label>From:</label>
-        <input class="w3-input w3-border" type="text" name="From" required>
+    <div class="w3-section" id="placeOrder">
       </div>
-      <div class="w3-section">
-        <label>To:</label>
-        <input class="w3-input w3-border" type="text" name="To" required>
-      </div>
-      <div class="w3-section">
-        <label>Subject:</label>
-        <input class="w3-input w3-border" type="text" name="Subject" required>
-      </div>
-      <div class="w3-section">
-            <label>Content:</label>
-            <textarea class="w3-input w3-border" type="text" name="Content" rows="20" required></textarea>
-          </div>
-      <button type="submit" class="w3-button w3-black w3-margin-bottom"><i class="fa fa-paper-plane w3-margin-right"></i>Place Order</button>
-    </form>
   </div>
 
 <!-- End page content -->

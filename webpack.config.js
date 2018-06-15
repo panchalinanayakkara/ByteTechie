@@ -19,13 +19,22 @@ module.exports = {
             presets: ["env", "react"]
           }
         }
+      },
+      {
+        test: /\.css$/,
+        loader: 'css-loader',
+        query: {
+          modules: true,
+          localIdentName: '[name]__[local]___[hash:base64:5]'
+        }
       }
     ]
   },
-  resolve:{
-    extensions: [".js", ".jsx"]
+  resolve: {
+    extensions: ['.css', '.js', '.jsx']
   },
   devServer: {
+    inline: false,
     contentBase: path.join(__dirname, "/"),
     compress: true
   },

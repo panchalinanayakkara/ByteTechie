@@ -31,6 +31,7 @@
     "babel-preset-react": "^6.24.1",
     "body-parser": "^1.18.3",
     "cors": "^2.8.4",
+    "css-loader": "^0.28.11",
     "prop-types": "^15.6.1",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
