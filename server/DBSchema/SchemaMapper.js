@@ -30,6 +30,29 @@ var DrugSchema = new Schema({
 
 mongoose.model('Drug', DrugSchema);
 
+//yash
+var PrescriptionSchema = new Schema({
+    patientId : {
+        type: Number,
+        required: true
+    },
+    prescriptionId :{
+        type: Number,
+        required: true
+    },
+    createdDate : {
+        type: String,
+        required: false
+    },
+    prescriptionDate:{
+        type: String,
+        required: false
+    }
+})
+
+mongoose.model('Prescription', PrescriptionSchema);
+//yash
+
 mongoose.connect('mongodb://localhost:27017/comments', (err) => {
     if (err) {
         console.log(err);
