@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>Pharmacy Stock</title>
+<title>Stock Handling</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -35,11 +35,60 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
     <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
     <div class="w3-container">
-    <h1><b>Pharmacy Stock</b></h1>
+    <h1><b>Stock Handling</b></h1>
     </div>
   </header>
 
-  <!-- Contact Section -->
+  <!-- Drug Dispence -->
+
+  <div class="w3-container w3-padding-large w3-grey">
+    <h4 id="contact"><b>Drug Dispense</b></h4>
+    <hr class="w3-opacity">
+        <div class="w3-section">
+            <label><h4><b>Patient ID:</b></h4></label>
+            <input class="w3-input w3-border" type="text" name="patientId" required><br/>
+            <a href="PlaceOrder.html"><button class="w3-button w3-black w3-margin-bottom">Search</a></button>
+        </div>
+  </div>
+
+  <div class="w3-container w3-padding-large w3-grey">
+        <h5 id="contact"><b>Prescription List: { patientId}</b></h5>
+        <hr class="w3-opacity">
+          <div class="w3-section">
+           <table class="w3-table-all">
+             <thead>
+                <tr class="w3-light-grey">
+                    <th width="500px"></th>
+                    <th width="500px"></th>
+                    <th width="500px"></th>
+                    <th item-width="500px">
+                        <input class="w3-input w3-border" type="text" name="prescriptionId" placeholder="Search..." required><br/>
+                    </th>
+                </tr>
+               <tr>
+                 <th width="500px">Prescription ID</th>
+                 <th width="500px">Create Data</th>
+                 <th width="500px">Prescription Date</th>
+                 <th width="500px">Action</th>
+               </tr>
+             </thead>
+             <tbody>
+                <td width="500px">Drug Name</td>
+                <td width="500px">Drug Name</td>
+                <td width="500px">Drug Name</td>
+                <td width="500px"><a href="PlaceOrder.html">View & Dispense</a></td>
+             </tbody>
+           </table>
+          </div>
+          <div class="w3-bar w3-border w3-round">
+                <a href="#" class="w3-button">&#10094; Previous</a>
+                <a href="#" class="w3-button w3-right">Next &#10095;</a>
+         </div>  
+      </div>
+
+  <br/><br/><br/><br/>
+
+  <!-- Drug Stock -->
   
   <div class="w3-container w3-padding-large w3-grey">
       <h4 id="contact"><b>Stock Handling</b></h4>
