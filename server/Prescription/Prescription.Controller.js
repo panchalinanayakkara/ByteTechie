@@ -5,11 +5,28 @@ var mongoose = require('../DBSchema/SchemaMapper');
 var prescriptionSchema = mongoose.model('Prescription');
 
 var prescriptionController = function(){
-    this.getPrescriptionByPatient = function(patient_Id){
+    // this.getPrescriptionByPatient = function(patient_id){
+    //     return new Promise(function(resolve, reject){
+    //         prescriptionSchema.find({
+    //             patientId: patient_Id
+    //         }).exec().then( function(prescriptionData) {
+    //             resolve({
+    //                 status: 200,
+    //                 message: "Fetching all the prescriptions",
+    //                 data: prescriptionData
+    //             });
+    //         } ).catch(function(err){
+    //             reject({
+    //                 status: 500,
+    //                 message: "Error in fetcing all the prescriptions"
+    //             })
+    //         })
+    //     })
+    // }
+
+    this.getPrescriptionByPatient = function(){
         return new Promise(function(resolve, reject){
-            prescriptionSchema.find({
-                patientId: patient_Id
-            }).exec().then( function(prescriptionData) {
+            prescriptionSchema.find().exec().then( function(prescriptionData) {
                 resolve({
                     status: 200,
                     message: "Fetching all the prescriptions",

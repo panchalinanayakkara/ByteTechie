@@ -5,8 +5,16 @@ var Router = express.Router();
 
 var prescriptionController = require('./Prescription.Controller');
 
-Router.get('/getprescriptions/:patientId', (req, res) => {
-    prescriptionController.getPrescriptionByPatient(req.param.patientId).then((response) => {
+Router.get('/getprescriptions/', (req, res) => {
+    // prescriptionController.getPrescriptionByPatient(req.param.patientId).then((response) => {
+    //     res.status(response.status).send({
+    //         message: response.message,
+    //         data: response.data
+    //     })
+    // }).catch((error) => {
+    //     res.status(error.status).send(error.message)
+    // })
+    prescriptionController.getPrescriptionByPatient().then((response) => {
         res.status(response.status).send({
             message: response.message,
             data: response.data

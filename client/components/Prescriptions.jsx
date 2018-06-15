@@ -6,7 +6,6 @@ import '../styles/css.css';
 //import '../styles/font-awesome.min.css';
 import '../styles/w3.css';
 
-import Stock from './Prescription.jsx';
 import Prescription from './Prescription.jsx';
 
 export default class Prescriptions extends Component{

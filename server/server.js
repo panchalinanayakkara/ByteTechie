@@ -6,6 +6,7 @@ var bodyParser = require('body-parser');
 //Import Routes
 var indexRoutes = require('./routes/index');
 var DrugRoute = require('./Drug/DrugRoute');
+var PrescriptionRoute = require('./Prescription/Prescription.route');
 
 var app = express();
 
@@ -26,6 +27,7 @@ app.use(express.static(path.join(__dirname, '../client')));
 //Routes
 app.use('/', indexRoutes);
 app.use('/drug/', DrugRoute);
+app.use('/prescription/', PrescriptionRoute);
 
 //Error Handling
 app.use(function(err, req, res, next){
