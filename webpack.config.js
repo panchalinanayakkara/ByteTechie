@@ -2,7 +2,7 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
-  entry: './client/pharmacy.jsx',
+  entry: './client/index.jsx',
   output: {
     path: path.join(__dirname, "Client"),
     filename: 'bundle.js'

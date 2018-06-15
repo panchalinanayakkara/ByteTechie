@@ -25,14 +25,24 @@ export default class Prescriptions extends Component{
     {
         const { prescriptions } = this.props;
         return <div>
-            <table>
+            <table className="w3-table-all">
                 <thead>
-                    <tr>
-                        <th width="500px">Patient ID</th>
-                        <th width="500px">Prescription ID</th>
-                        <th width="500px">Created Date</th>
-                        <th width="500px">Prescription Date</th>
-                    </tr>
+                  <tr className="w3-light-grey">
+                    <th width="500px" />
+                    <th width="500px" />
+                    <th width="500px" />
+                    <th width="500px" />
+                    <th item-width="500px">
+                      <input className="w3-input w3-border" type="text" name="prescriptionId" placeholder="Search..." required /><br />
+                    </th>
+                  </tr>
+                  <tr>
+                    <th width="500px">Patient ID</th>
+                    <th width="500px">Prescription ID</th>
+                    <th width="500px">Create Data</th>
+                    <th width="500px">Prescription Date</th>
+                    <th width="500px">Action</th>
+                  </tr>
                 </thead>
                 <tbody>
                     {
@@ -40,8 +50,8 @@ export default class Prescriptions extends Component{
                             return <Prescription key={prescription.patientId} prescription={prescription} getAllPrescriptions= {()  =>  this.props.getAllPrescriptions()} />
                         })
                     }
-                </tbody>
-            </table>
+                 </tbody>
+              </table>
         </div>
         }
 }

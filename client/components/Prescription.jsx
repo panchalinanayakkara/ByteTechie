@@ -24,11 +24,12 @@ export default class Prescription extends Component{
 
     render()
     {
-        return <tr>
+        return  <tr>
                     <td width="500px">{prescription.patientId}</td>
                     <td width="500px">{prescription.prescriptionId}</td>
                     <td width="500px">{prescription.createdDate}</td>
                     <td width="500px">{prescription.prescriptionDate}</td>
-                </tr>
+                 <td width="500px"><a href="PlaceOrder.html">View &amp; Dispense</a></td>
+               </tr>
         }
 }
