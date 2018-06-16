@@ -108,9 +108,7 @@ export default class StockHandling extends Component{
             <button type="submit" className="w3-button w3-black w3-margin-bottom"><i className="fa fa-paper-plane w3-margin-right" />View As PDF</button>
           </div>
           {/* End page content */}
-        </div>
-
-           
+        </div>           
         </div>
     }
 }

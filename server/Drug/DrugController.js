@@ -28,7 +28,19 @@ var DrugController = function(){
                 reject({status: 500, message: "Error:- " + err});
             })
         })
-    } 
+    }
+
+    this.updateDrug = (drugId) => {
+        return new Promise((resolve, reject) => {
+            DrugSchema.update({
+                drugID: drugId
+            }, data).then(() => {
+                resolve({status: 200, message: "Drug details updated successfully!"});
+            }).catch(err => {
+                reject({status: 500, message: "Error:- " + err});
+            })
+        })
+    }
 }
 
 module.exports = new DrugController();
