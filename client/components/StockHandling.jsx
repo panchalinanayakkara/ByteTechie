@@ -15,11 +15,14 @@ export default class StockHandling extends Component{
     {
         super(props);
         this.state = {
+            patientId: '',
             prescriptions: [],
             drugs: []
         }
         this.getAllPrescriptions();
         this.getAllDrugs();
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSearch = this.handleSearch.bind(this);
     }
 
     getAllPrescriptions()
@@ -42,6 +45,10 @@ export default class StockHandling extends Component{
           })
     }
 
+    handleChange(event){
+        this.setState({patientId: event.value.target});
+    }
+
     render()
     {
         return<div>
@@ -60,8 +67,8 @@ export default class StockHandling extends Component{
             </a>
           </div>
           <div className="w3-bar-block">
-            <a href="index.html" className="w3-bar-item w3-button w3-padding w3-text-teal"><i className="fa fa-th-large fa-fw w3-margin-right" />Pharmacy Stock</a>
-            <a href="StockHandling.html" className="w3-bar-item w3-button w3-padding w3-text-teal"><i className="fa fa-th-large fa-fw w3-margin-right" />Stock Handling</a>
+            <Link to="/" className="w3-bar-item w3-button w3-padding w3-text-teal"><i className="fa fa-th-large fa-fw w3-margin-right" />Pharmacy Stock</Link>
+            <Link to="/stockhandling" className="w3-bar-item w3-button w3-padding w3-text-teal"><i className="fa fa-th-large fa-fw w3-margin-right" />Stock Handling</Link>
           </div>
         </nav>
         {/* Overlay effect when opening sidebar on small screens */}
@@ -82,8 +89,8 @@ export default class StockHandling extends Component{
             <hr className="w3-opacity" />
             <div className="w3-section">
               <label><h4><b>Patient ID:</b></h4></label>
-              <input className="w3-input w3-border" type="text" name="patientId" required /><br />
-              <a href="PlaceOrder.html" /><button className="w3-button w3-black w3-margin-bottom"><a href="PlaceOrder.html">Search</a></button>
+              <input className="w3-input w3-border" type="text" name="patientId" onChange={this.handleChange} required /><br />
+                <button className="w3-button w3-black w3-margin-bottom" >Search</button>
             </div>
           </div>
           <div className="w3-container w3-padding-large w3-grey">
